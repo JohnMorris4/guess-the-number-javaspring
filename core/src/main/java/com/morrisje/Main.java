@@ -25,6 +25,12 @@ public class Main {
 //        LOG generator number
         log.info("number = {}", number);
 
+//        get the game bean from context
+        Game game = context.getBean(Game.class);
+
+        //Call the reset method
+        game.reset();
+
 //        CLOSE CONTEXT
         context.close();
 

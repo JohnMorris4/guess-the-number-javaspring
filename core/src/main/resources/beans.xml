@@ -6,4 +6,10 @@
 
     <bean id="numberGenerator" class="com.morrisje.NumberGeneratorImpl" />
 
+    <bean id="game" class="com.morrisje.GameImpl">
+        <!--<constructor-arg ref="numberGenerator"/>-->
+        <!--Setter based Dependency Injection-->
+        <property name="numberGenerator" ref="numberGenerator"/>
+    </bean>
+
 </beans>
